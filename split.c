@@ -36,19 +36,7 @@ int __count_tokens__(const char* str, const char* split) {
     while( token != NULL ) {
       
       count = count + 1;
-      /*
-      int isLower = 1;
-      for (int i = 0; i < strlen(token); i++) {
-        if(islower(token[i])) {
 
-        } else {
-          isLower = 0;
-        }
-      }
-      if (isLower == 1) {
-        count = count + 1;
-      }
-      */
       token = strtok(NULL, split);
     }
   return count;
@@ -75,23 +63,7 @@ char** split(const char* str, const char* split) {
 
 
     while( token != NULL ) {
-        /*
-      int isLower = 1;
-      for (int i = 0; i < strlen(token); i++) {
-        if(islower(token[i])) {
-
-        } else {
-          isLower = 0;
-        }
-      }
-      
-      if (isLower == 1) {
-        char * str_token = (char*)malloc(sizeof(char)*strlen(token));
-        strcpy(str_token, token);
-        arr[count] = str_token;
-        count = count + 1;
-      }
-      */
+     
         char * str_token = (char*)malloc(sizeof(char)*strlen(token));
         strcpy(str_token, token);
         arr[count] = str_token;
